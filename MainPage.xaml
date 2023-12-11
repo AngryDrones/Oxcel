@@ -1,0 +1,28 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Oxcel.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Рядок для кнопок -->
+            <RowDefinition Height="Auto" />
+            <!-- Рядок нижче для таблиці -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Orientation="Horizontal">
+            <Button Text="+ рядок" Clicked="AddRow_Clicked" />
+            <Button Text="+ колону" Clicked="AddColumn_Clicked" />
+            <Button Text="- рядок" Clicked="DeleteRow_Clicked" />
+            <Button Text="- колону" Clicked="DeleteColumn_Clicked" />
+            <Button Text="Зберегти" Clicked="SaveTable_Clicked" />
+            <Button Text="Загрузити" Clicked="LoadTable_Clicked" />
+            <Button Text="Інфо" Clicked="Info_Clicked" />
+            <Button Text="Очистити" Clicked="ClearTable_Clicked" />
+            <Button Text="Вихід" Clicked="Exit_Clicked" />
+        </StackLayout>
+
+        <Grid x:Name="cellGrid" Grid.Row="1"></Grid>
+    </Grid>
+
+</ContentPage>
